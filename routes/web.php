@@ -21,3 +21,11 @@ Route::get('/materiais/{id}/show','App\Http\Controllers\MateriaisController@show
 Route::get('/requisicoes','App\Http\Controllers\RequisicoesController@index')->name('requisicoes.index');
 
 Route::get('/requisicoes/{id}/show','App\Http\Controllers\RequisicoesController@show')->name('requisicoes.show');
+
+Route::get('/requisitantes','App\Http\Controllers\RequisitantesController@index')->name('requisitantes.index');
+
+Route::get('/requisitantes/{id}/show','App\Http\Controllers\RequisitantesController@show')->name('requisitantes.show');
+
+Route::get('/tiposequipamentos','App\Http\Controllers\TiposequipamentosController@index')->name('tiposequipamentos.index');
+
+Route::get('/tiposequipamentos/{id}/show','App\Http\Controllers\TiposequipamentosController@show')->name('tiposequipamentos.show');
