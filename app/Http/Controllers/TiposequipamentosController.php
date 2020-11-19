@@ -16,7 +16,7 @@ class TiposequipamentosController extends Controller
     
     public function show(Request $request){
         $idTiposequipamentos=$request->id;
-       $tiposequipamentos=tiposequipamentos::where('id_tiposequipamentos',$idTiposequipamentos)->first();
+       $tiposequipamentos=tiposequipamentos::where('id_tipo_equipamento',$idTiposequipamentos)->first();
         
         return view('tiposequipamentos.show',[
             'tiposequipamentos'=>$tiposequipamentos

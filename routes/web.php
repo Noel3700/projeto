@@ -29,3 +29,7 @@ Route::get('/requisitantes/{id}/show','App\Http\Controllers\RequisitantesControl
 Route::get('/tiposequipamentos','App\Http\Controllers\TiposequipamentosController@index')->name('tiposequipamentos.index');
 
 Route::get('/tiposequipamentos/{id}/show','App\Http\Controllers\TiposequipamentosController@show')->name('tiposequipamentos.show');
+
+Route::get('/tiposrequisitantes','App\Http\Controllers\TiposrequisitantesController@index')->name('tiposrequisitantes.index');
+
+Route::get('/tiposrequisitantes/{id}/show','App\Http\Controllers\TiposrequisitantesController@show')->name('tiposrequisitantes.show');
