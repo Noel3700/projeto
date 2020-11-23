@@ -12,4 +12,11 @@ class Tiposrequisitantes extends Model
     protected $primaryKey="id_tipo_requisitante";
 
     protected $table="tipos_requisitantes";
+    
+            public function requisitantes(){
+        return $this->hasMany(
+        'App\Models\Requisitantes',
+        'id_tipo_requisitante'
+        );
+}
 }

@@ -12,4 +12,18 @@ class Materiais extends Model
     protected $primaryKey="id_material";
 
     protected $table="materiais";
-}
+    
+    public function tipo_equipamento(){
+        return $this->belongsTo(
+        'App\Models\Tiposequipamentos',
+        'id_tipo_equipamento'
+        );
+    }
+        public function requisicoes(){
+        return $this->belongsTo(
+        'App\Models\Requisicoes',
+        'id_material'
+        );
+    }
+ }
+

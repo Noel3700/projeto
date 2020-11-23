@@ -17,7 +17,7 @@ class RequisicoesController extends Controller
     
     public function show(Request $request){
         $idRequisicoes=$request->id;
-       $requisicao=requisicoes::where('id_requisicao',$idRequisicoes)->first();
+       $requisicao=requisicoes::where('id_requisicao',$idRequisicoes)->with('materiais','requisitantes')->first();
         
         return view('requisicoes.show',[
             'requisicao'=>$requisicao

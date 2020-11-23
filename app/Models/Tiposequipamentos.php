@@ -12,4 +12,13 @@ class Tiposequipamentos extends Model
      protected $primaryKey="id_tipo_equipamento";
 
     protected $table="tipos_equipamentos";
+    
+        public function materiais(){
+        return $this->hasMany(
+        'App\Models\Materiais',
+        'id_tipo_equipamento'
+        );
+            
+        
+}
 }

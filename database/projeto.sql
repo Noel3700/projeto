@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16-Nov-2020 às 18:26
+-- Generation Time: 19-Nov-2020 às 11:21
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
@@ -44,13 +44,11 @@ CREATE TABLE `materiais` (
 
 INSERT INTO `materiais` (`id_material`, `id_tipo_equipamento`, `designacao`, `codigo_interno`, `observacoes`, `created_at`, `updated_at`) VALUES
 (1, 1, 'PC HP', NULL, NULL, '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
-(2, 1, 'PC HP', NULL, NULL, '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
-(3, 1, 'PC HP', NULL, NULL, '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
-(4, 1, 'PC HP', NULL, NULL, '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
-(5, 1, 'PC HP', NULL, NULL, '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
-(6, 2, 'Sistemas de Informação de Apoio à Gestão', NULL, NULL, '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
-(7, 2, 'Cidades e Regiões Digitais: impacte nas cidades e nas pessoas', NULL, NULL, '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
-(8, 2, 'Informática e Competências Tecnológicas para a Sociedade da Informação', NULL, NULL, '2019-03-01 14:15:32', '2019-03-01 14:15:32');
+(2, 1, 'Monitor Asus', '985675', 'Monitor 144hz ideal para gaming', '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
+(6, 2, 'Serrotes', '2453657', 'Serrote ideal para corte de madeiras de carvalho', '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
+(8, 2, 'Teclados', '534', 'Teclados HyperX', '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
+(9, 10, 'Martelos', '16864353', 'Martelos de borracha para bater em tijoleira', NULL, NULL),
+(1233, 99, 'Bobines para canos', '755778', 'Bobines feitas em aço inoxidavel', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -196,7 +194,7 @@ ALTER TABLE `tipos_requisitantes`
 -- AUTO_INCREMENT for table `materiais`
 --
 ALTER TABLE `materiais`
-  MODIFY `id_material` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_material` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1234;
 
 --
 -- AUTO_INCREMENT for table `requisicoes`

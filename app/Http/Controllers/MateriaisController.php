@@ -16,7 +16,7 @@ class MateriaisController extends Controller
     
     public function show(Request $request){
         $idMateriais=$request->id;
-       $material=materiais::where('id_material',$idMateriais)->first();
+       $material=Materiais::where('id_material',$idMateriais)->with(['tipo_equipamento','requisicoes'])->first();
         
         return view('materiais.show',[
             'material'=>$material

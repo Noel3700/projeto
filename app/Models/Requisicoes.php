@@ -12,4 +12,17 @@ class Requisicoes extends Model
     protected $primaryKey="id_requisicao";
 
     protected $table="requisicoes";
+    
+            public function materiais(){
+        return $this->hasMany(
+        'App\Models\Materiais',
+        'id_material'
+        );
+            }
+        public function requisitantes(){
+        return $this->hasMany(
+        'App\Models\Requisitantes',
+        'id_requisitante'
+        );
+}
 }

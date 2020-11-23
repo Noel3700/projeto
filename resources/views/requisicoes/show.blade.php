@@ -11,5 +11,12 @@ Hora da Entrega: {{$requisicao->hora_entrega}}<br>
 ID do Material: {{$requisicao->id_material}}<br>
 Tipo de Equipamento: {{$requisicao->id_tipo_equipamento}}<br>
 Observações: {{$requisicao->observacoes}}<br>
-ID do Requesitante: {{$requisicao->id_requesitantes}}
+ID do Requesitante: {{$requisicao->id_requesitantes}}<br>
 
+@foreach($requisicao->materiais as $material)
+Material:{{$material->designacao}}<br>
+@endforeach
+
+@foreach($requisicao->requisitantes as $requisitante)
+Requisitante:{{$requisitante->nome}}<br>
+@endforeach
