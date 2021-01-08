@@ -5,5 +5,7 @@ Designacao: {{$material->designacao}}<br>
 Codigo Interno: {{$material->codigo_interno}}<br>
 Observações: {{$material->observacoes}}
 
-tipo:{{$material->tipo_equipamento->descricao}}
+
+@if(isset($material->requisicoes->data_requisicao))
 Requisicao:{{$material->requisicoes->data_requisicao}}
+@endif

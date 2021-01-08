@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Materiais extends Model
 {
     use HasFactory;
@@ -12,6 +13,13 @@ class Materiais extends Model
     protected $primaryKey="id_material";
 
     protected $table="materiais";
+    
+    protected $fillable=[
+        'id_tipo_equipamento',
+        'designacao',
+        'codigo_interno',
+        'observacoes'
+    ];
     
     public function tipo_equipamento(){
         return $this->belongsTo(

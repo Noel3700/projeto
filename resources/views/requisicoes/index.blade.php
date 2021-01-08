@@ -5,3 +5,6 @@
          {{$requisicao->id_requisicao}}
     </a></h3>                           
 @endforeach
+
+<a href="{{route('requisicoes.create')}}" class="btn btn-primary">Adicionar Requisições
+</a>

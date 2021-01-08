@@ -6,6 +6,7 @@
     </a></h3>       
 @endforeach
 
-
+<a href="{{route('materiais.create')}}" class="btn btn-primary">Adicionar Autor
+</a>
 
 

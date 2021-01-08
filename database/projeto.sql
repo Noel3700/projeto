@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 19-Nov-2020 às 11:21
+-- Generation Time: 08-Jan-2021 às 18:22
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
@@ -48,7 +48,8 @@ INSERT INTO `materiais` (`id_material`, `id_tipo_equipamento`, `designacao`, `co
 (6, 2, 'Serrotes', '2453657', 'Serrote ideal para corte de madeiras de carvalho', '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
 (8, 2, 'Teclados', '534', 'Teclados HyperX', '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
 (9, 10, 'Martelos', '16864353', 'Martelos de borracha para bater em tijoleira', NULL, NULL),
-(1233, 99, 'Bobines para canos', '755778', 'Bobines feitas em aço inoxidavel', NULL, NULL);
+(1233, 99, 'Bobines para canos', '755778', 'Bobines feitas em aço inoxidavel', NULL, NULL),
+(1234, 1, 'PREGOS', '1234567891', NULL, '2021-01-08 16:19:05', '2021-01-08 16:19:05');
 
 -- --------------------------------------------------------
 
@@ -194,7 +195,7 @@ ALTER TABLE `tipos_requisitantes`
 -- AUTO_INCREMENT for table `materiais`
 --
 ALTER TABLE `materiais`
-  MODIFY `id_material` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1234;
+  MODIFY `id_material` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1243;
 
 --
 -- AUTO_INCREMENT for table `requisicoes`
