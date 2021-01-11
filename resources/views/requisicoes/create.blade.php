@@ -1,5 +1,14 @@
 <form action="{{route('requisicoes.store')}}" method="post">
 @csrf
+
+    
+    ID da Requesitantes: <input type="text" name="id_requesitantes" value="{{old('id_requesitantes')}}"><br><br>
+    @if($errors->has('id_requesitantes'))
+    <b style="color:red"> Campo Obrigatório</b>
+    <br><br>
+    @endif
+    
+    
     Data Requisição: <input type="date" name="data_requisicao" value="{{old('data_requisicao')}}"><br><br>
     @if($errors->has('data_requisicao'))
     <b style="color:red"> Campo Obrigatório</b>
@@ -21,25 +30,16 @@
     
     
     Entrega: <input type="text" name="entregue" value="{{old('entregue')}}"><br><br>
-    @if($errors->has('entregue'))
-    <b style="color:red"> Campo Obrigatório</b>
-    <br><br>
-    @endif
+    
     
     
     Renovar: <input type="text" name="renovou" value="{{old('renovou')}}"><br><br>
-    @if($errors->has('renovou'))
-    <b style="color:red"> Campo Obrigatório</b>
-    <br><br>
-    @endif
+    
     
     
     Hora de Entrega: <input type="datetime" name="hora_entrega" value="{{old('hora_entrega')}}"><br><br>
-    @if($errors->has('hora_entrega'))
-    <b style="color:red"> Campo Obrigatório</b>
-    <br><br>
-    @endif
     
+     Hora de Requisicao: <input type="datetime" name="hora_requisicao" value="{{old('hora_requisicao')}}"><br><br>
     
     ID Material: <input type="text" name="id_material" value="{{old('id_material')}}"><br><br>
     @if($errors->has('id_material'))

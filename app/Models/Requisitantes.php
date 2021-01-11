@@ -13,6 +13,15 @@ class Requisitantes extends Model
 
     protected $table="requisitantes";
     
+    protected $fillable=[
+        'nome',
+        'telefone',
+        'email',
+        'localidade',
+        'cartao_cidadao',
+        'id_tipo_requisitante'
+    ];
+    
             public function requisicoes(){
         return $this->belongsTo(
         'App\Models\Requisicoes',

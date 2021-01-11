@@ -29,31 +29,26 @@ class RequisicoesController extends Controller
     }
     
      public function store(Request $request){
-        $novoMaterial = $request->validate([
+        $novoRequisicao = $request->validate([
+        
+            
+        'id_requesitantes'=>['required','min:1','max:500'],
         'data_requisicao'=>['required','date'],
         'data_prevista_entrega'=>['required','date'],
         'data_entrega'=>['nullable','date'],
         'data_renovacao'=>['nullable','date'],
-        'entregue'=>['nullable','date'],
-        'renovou'=>['nullable','date'],
+        'entregue'=>['required'],
+        'renovou'=>['required'],
         'hora_requisicao'=>['nullable','date'],
-        'hora_entrega'=>['nullable'','date'],
+        'hora_entrega'=>['nullable','date'],
         'id_material'=>['required','min:1','max:100'],
         'id_tipo_equipamento'=>['required','min:1','max:100'],
         'observacoes'  =>['nullable','min:1','max:250']
-            
-            
-            
-            
-            'id_tipo_equipamento'=>['required','min:1','max:100'],
-            'designacao'=>['required','min:1','max:50'],
-            'codigo_interno'=>['required','min:10','max:10'],
-            'observacoes'=>['nullable','min:1','max:255']
         ]);
-        $materiais=Materiais::create($novoMaterial);
+        $requisicoes=Requisicoes::create($novoRequisicao);
         
-        return redirect()->route('materiais.index',[
-            'id'=>$materiais->id_material
+        return redirect()->route('requisicoes.index',[
+            'id'=>$requisicoes->id_requisicao
         ]);
     }
     

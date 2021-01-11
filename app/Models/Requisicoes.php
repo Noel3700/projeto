@@ -14,6 +14,7 @@ class Requisicoes extends Model
     protected $table="requisicoes";
     
     protected $fillable=[
+        'id_requesitantes',
         'data_requisicao',
         'data_prevista_entrega',
         'data_entrega',

@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/requisitantes','App\Http\Controllers\RequisitantesController@index')->name('requisitantes.index');
+
+Route::get('/requisitantes/{id}/show','App\Http\Controllers\RequisitantesController@show')->name('requisitantes.show');
+
+Route::get('/requisitantes/create', 'App\Http\Controllers\RequisitantesController@create')->name('requisitantes.create');
+
+Route::get('/requisitantes', 'App\Http\Controllers\RequisitantesController@store')->name('requisitantes.store');
+
 
 Route::get('/materiais','App\Http\Controllers\MateriaisController@index')->name('materiais.index');
 
@@ -38,14 +46,6 @@ Route::post('/requisicoes', 'App\Http\Controllers\RequisicoesController@store')-
 
 
 
-
-Route::get('/requisitantes','App\Http\Controllers\RequisitantesController@index')->name('requisitantes.index');
-
-Route::get('/requisitantes/{id}/show','App\Http\Controllers\RequisitantesController@show')->name('requisitantes.show');
-
-Route::get('/requisitantes/create', 'App\Http\Controllers\RequisitantesController@create')->name('requisitantes.create');
-
-Route::get('/requisitantes', 'App\Http\Controllers\RequisitantesController@store')->name('requisitantes.store');
 
 
 
