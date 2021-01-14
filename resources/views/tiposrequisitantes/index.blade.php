@@ -5,3 +5,6 @@
          {{$tiposrequisitante->tipo}}
     </a></h3>                           
 @endforeach 
+
+<a href="{{route('tiposrequisitantes.create')}}" class="btn btn-primary">Adicionar Tipo de Requisitante
+</a>

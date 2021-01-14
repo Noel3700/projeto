@@ -22,4 +22,24 @@ class TiposrequisitantesController extends Controller
             'tiposrequisitantes'=>$tiposrequisitantes
         ]);
     }
+    
+    
+      public function create(){
+        return view('tiposrequisitantes.create');
+    }
+    
+     public function store(Request $request){
+        $novoTiporequisitante = $request->validate([
+        
+            
+        'tipo'=>['required','min:1','max:150']
+    
+        ]);
+         
+        $tiposrequisitantes=Tiposrequisitantes::create( $novoTiporequisitante);
+        
+        return redirect()->route('tiposrequisitantes.index',[
+            'id'=>$tiposrequisitantes->id_tipo_requisitante
+        ]);
+    }
 }

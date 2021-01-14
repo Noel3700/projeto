@@ -13,6 +13,17 @@ class Tiposequipamentos extends Model
 
     protected $table="tipos_equipamentos";
     
+    
+            protected $fillable=[
+        'descricao'
+    ];
+    
+    
+    
+    
+    
+    
+    
         public function materiais(){
         return $this->hasMany(
         'App\Models\Materiais',

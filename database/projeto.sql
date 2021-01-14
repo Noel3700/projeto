@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Jan-2021 às 18:22
+-- Generation Time: 14-Jan-2021 às 16:30
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
@@ -48,8 +48,8 @@ INSERT INTO `materiais` (`id_material`, `id_tipo_equipamento`, `designacao`, `co
 (6, 2, 'Serrotes', '2453657', 'Serrote ideal para corte de madeiras de carvalho', '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
 (8, 2, 'Teclados', '534', 'Teclados HyperX', '2019-03-01 14:15:32', '2019-03-01 14:15:32'),
 (9, 10, 'Martelos', '16864353', 'Martelos de borracha para bater em tijoleira', NULL, NULL),
-(1233, 99, 'Bobines para canos', '755778', 'Bobines feitas em aço inoxidavel', NULL, NULL),
-(1234, 1, 'PREGOS', '1234567891', NULL, '2021-01-08 16:19:05', '2021-01-08 16:19:05');
+(1233, 99, 'Melhores Bobines', '7557780965', 'Bobines feitas em aço inoxidavel', NULL, '2021-01-14 14:03:43'),
+(1234, 1, 'nada', '1234567891', NULL, '2021-01-08 16:19:05', '2021-01-14 14:02:18');
 
 -- --------------------------------------------------------
 
@@ -107,7 +107,8 @@ CREATE TABLE `requisitantes` (
 
 INSERT INTO `requisitantes` (`id_requisitante`, `nome`, `telefone`, `email`, `localidade`, `cartao_cidadao`, `id_tipo_requisitante`, `created_at`, `updated_at`) VALUES
 (1, 'Aurélio Maria da Silva', '915678999', 'aureliosilva@gmail.com', 'Porto', '183921781663', '', NULL, NULL),
-(2, 'Ricardo granja', '963458765', 'ricardinho22@gmail.com', 'S.Salvador', '1342532547645', '', NULL, NULL);
+(2, 'Ricardo granja', '963458765', 'ricardinho22@gmail.com', 'S.Salvador', '1342532547645', '', NULL, NULL),
+(3, 'Tiago Costa', NULL, NULL, NULL, NULL, '7', '2021-01-14 09:04:58', '2021-01-14 15:13:34');
 
 -- --------------------------------------------------------
 
@@ -129,7 +130,12 @@ CREATE TABLE `tipos_equipamentos` (
 INSERT INTO `tipos_equipamentos` (`id_tipo_equipamento`, `descricao`, `created_at`, `updated_at`) VALUES
 (1, 'Computadores', NULL, NULL),
 (2, 'Livros', NULL, NULL),
-(3, 'Calculadoras', NULL, NULL);
+(3, 'Calculadoras', NULL, NULL),
+(4, 'Balas de AK-47', '2021-01-14 09:38:14', '2021-01-14 09:38:14'),
+(5, 'Balas de AK-47', '2021-01-14 15:22:52', '2021-01-14 15:22:52'),
+(6, 'Balas de AK-47', '2021-01-14 15:23:04', '2021-01-14 15:23:04'),
+(7, 'Balas de AK-47', '2021-01-14 15:25:13', '2021-01-14 15:25:13'),
+(8, 'sgdgdd', '2021-01-14 15:28:37', '2021-01-14 15:28:37');
 
 -- --------------------------------------------------------
 
@@ -151,7 +157,8 @@ CREATE TABLE `tipos_requisitantes` (
 INSERT INTO `tipos_requisitantes` (`id_tipo_requisitante`, `tipo`, `created_at`, `updated_at`) VALUES
 (1, 'Auxiliares', NULL, NULL),
 (2, 'Professores', NULL, NULL),
-(3, 'Alunos', NULL, NULL);
+(3, 'Alunos', NULL, NULL),
+(4, 'Técnico', '2021-01-14 09:47:14', '2021-01-14 09:47:14');
 
 --
 -- Indexes for dumped tables
@@ -207,13 +214,19 @@ ALTER TABLE `requisicoes`
 -- AUTO_INCREMENT for table `requisitantes`
 --
 ALTER TABLE `requisitantes`
-  MODIFY `id_requisitante` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_requisitante` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tipos_equipamentos`
+--
+ALTER TABLE `tipos_equipamentos`
+  MODIFY `id_tipo_equipamento` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tipos_requisitantes`
 --
 ALTER TABLE `tipos_requisitantes`
-  MODIFY `id_tipo_requisitante` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_tipo_requisitante` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

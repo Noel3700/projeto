@@ -20,3 +20,5 @@ Material:{{$material->designacao}}<br>
 @foreach($requisicao->requisitantes as $requisitante)
 Requisitante:{{$requisitante->nome}}<br>
 @endforeach
+
+<a href="{{route('requisicoes.edit',['id'=>$requisicao->id_requisicao])}}">Editar</a>

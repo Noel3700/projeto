@@ -5,3 +5,6 @@
          {{$requisitante->nome}}
     </a></h3>                           
 @endforeach
+
+<a href="{{route('requisitantes.create')}}" class="btn btn-primary">Adicionar Requisitante
+</a>

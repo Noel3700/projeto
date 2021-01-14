@@ -39,8 +39,8 @@ class RequisicoesController extends Controller
         'data_renovacao'=>['nullable','date'],
         'entregue'=>['required'],
         'renovou'=>['required'],
-        'hora_requisicao'=>['nullable','date'],
-        'hora_entrega'=>['nullable','date'],
+        'hora_requisicao'=>['nullable'],
+        'hora_entrega'=>['nullable'],
         'id_material'=>['required','min:1','max:100'],
         'id_tipo_equipamento'=>['required','min:1','max:100'],
         'observacoes'  =>['nullable','min:1','max:250']
@@ -52,7 +52,42 @@ class RequisicoesController extends Controller
         ]);
     }
     
+     public function edit (Request $request) {
+        $idRequisicao=$request->id;
+        $requisicao=Requisicoes::where('id_requisicao', $idRequisicao)->first();
+        
+        return view('requisicoes.edit',[
+            'requisicao'=>$requisicao
+        ]);   
+    }
     
+    
+    public function update (Request $request){
+        $idRequisicao=$request->id;
+        $requisicao=Requisicoes::findOrFail($idRequisicao);
+        // dd($request->all());
+         $atualizarRequisicao = $request->validate([
+             
+        'id_requesitantes'=>['required','min:1','max:500'],
+        'data_requisicao'=>['required','date'],
+        'data_prevista_entrega'=>['required','date'],
+        'data_entrega'=>['nullable','date'],
+        'data_renovacao'=>['nullable','date'],
+        'entregue'=>['required'],
+        'renovou'=>['required'],
+        'hora_requisicao'=>['nullable'],
+        'hora_entrega'=>['nullable'],
+        'id_material'=>['required','min:1','max:100'],
+        'id_tipo_equipamento'=>['required','min:1','max:100'],
+        'observacoes'  =>['nullable','min:1','max:250']
+        ]);
+       
+        $requisicao->update($atualizarRequisicao);
+        
+        return redirect()->route('requisicoes.show',[
+            'id'=>$requisicao->id_requisicao
+        ]);
+    }
     
     
     

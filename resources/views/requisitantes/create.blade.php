@@ -1,4 +1,4 @@
-<form action="{{route('requisicoes.store')}}" method="post">
+<form action="{{route('requisitantes.store')}}" method="post">
 @csrf
 
     
@@ -25,11 +25,7 @@
    
     
     
-    ID Tipo Requisitante: <input type="text" name="id_tipo_requisitante" value="{{old('id_tipo_requisitante')}}"><br><br>
-    @if($errors->has('id_tipo_requisitante'))
-    <b style="color:red"> Campo Obrigatório</b>
-    <br><br>
-    @endif
+
     
     
   

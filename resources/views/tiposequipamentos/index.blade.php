@@ -5,3 +5,6 @@
          {{$tiposequipamento->descricao}}
     </a></h3>                           
 @endforeach 
+
+<a href="{{route('tiposequipamentos.create')}}" class="btn btn-primary">Adicionar Equipamento
+</a>

@@ -13,6 +13,10 @@ class Tiposrequisitantes extends Model
 
     protected $table="tipos_requisitantes";
     
+        protected $fillable=[
+        'tipo'
+    ];
+    
             public function requisitantes(){
         return $this->hasMany(
         'App\Models\Requisitantes',
