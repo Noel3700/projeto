@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function(){
+    return view ('welcome');
+});
+
+
+
+
 Route::get('/requisitantes','App\Http\Controllers\RequisitantesController@index')->name('requisitantes.index');
 
 Route::get('/requisitantes/{id}/show','App\Http\Controllers\RequisitantesController@show')->name('requisitantes.show');
@@ -88,3 +95,7 @@ Route::get('/tiposrequisitantes/{id}/show','App\Http\Controllers\Tiposrequisitan
 Route::get('/tiposrequisitantes/create', 'App\Http\Controllers\TiposrequisitantesController@create')->name('tiposrequisitantes.create');
 
 Route::post('/tiposrequisitantes', 'App\Http\Controllers\TiposrequisitantesController@store')->name('tiposrequisitantes.store');
+
+Route::get('/tiposrequisitantes/{id}/edit', 'App\Http\Controllers\TiposrequisitantesController@edit')->name('tiposrequisitantes.edit');
+
+Route::patch('/tiposrequisitantes', 'App\Http\Controllers\TiposrequisitantesController@update')->name('tiposrequisitantes.update');

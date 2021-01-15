@@ -42,4 +42,84 @@ class TiposrequisitantesController extends Controller
             'id'=>$tiposrequisitantes->id_tipo_requisitante
         ]);
     }
+    
+      public function edit (Request $request) {
+        $idTiposrequisitantes=$request->id;
+        $tiporequisitante=Tiposrequisitantes::where('id_tipo_requisitante', $idTiposrequisitantes)->first();
+        
+        return view('tiposrequisitantes.edit',[
+            'tiporequisitante'=>$tiporequisitante
+        ]);   
+    }
+    
+    
+    public function update (Request $request){
+        $idTiposrequisitantes=$request->id;
+        $tiporequisitante=Tiposrequisitantes::findOrFail($idTiposrequisitantes);
+        
+         $atualizarTiposrequisitantes = $request->validate([
+          'tipo'=>['required','min:1','max:150']
+        ]);
+        
+        $tiporequisitante->update($atualizarTiposrequisitantes);
+        
+        return redirect()->route('tiposrequisitantes.index',[
+            'id'=>$tiporequisitante->id_tipo_requisitante
+        ]);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

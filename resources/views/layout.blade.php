@@ -10,6 +10,11 @@
         <h1>@yield('header')</h1>
              
             @yield('conteudo')
+        <a href="{{route('materiais.index')}}">Materiais</a><br>
+        <a href="{{route('requisicoes.index')}}">Requisições</a><br>
+        <a href="{{route('requisitantes.index')}}">Requisitantes</a><br>
+        <a href="{{route('tiposequipamentos.index')}}">Tipos de Equipamentos</a><br>
+        <a href="{{route('tiposrequisitantes.index')}}">Tipos de Requisitantes</a><br>
               
         <script src="{{asset('js/jquery.min.js')}}"></script>
         <script src="{{asset('js/bootstrap.min.js')}}"></script>
